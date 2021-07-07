@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Blog Aggregator',
-    title: 'blogaggregator-app',
+    titleTemplate: '%s - LinkWe',
+    title: 'Blog Aggregator',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,7 +27,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
+  plugins: ['~plugins/filters.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

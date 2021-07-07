@@ -1,7 +1,11 @@
 <template>
   <v-row>
-    <v-col cols="12" sm="12" md="12" v-for="post in posts" :key="post.id">
-      <Post :title="post.title" :description="post.description"/>
+    <v-col cols="8" sm="12" md="8">
+      <Post :post="post" v-for="post in posts" :key="post.id"/>
+    </v-col>
+    <v-col cols="4" sm="12" md="4">
+      <v-subheader>Recommended Topics</v-subheader>
+      <CategoryList :categories="categories" />
     </v-col>
   </v-row>
 </template>
@@ -12,10 +16,14 @@ export default {
   computed: {
     posts() {
       return  this.$store.state.posts.list;
+    },
+    categories() {
+      return this.$store.state.categories.list;
     }
   },
   created () {
     this.$store.dispatch('posts/loadPosts');
+    this.$store.dispatch('categories/loadCategories');
   }
 }
 </script>
