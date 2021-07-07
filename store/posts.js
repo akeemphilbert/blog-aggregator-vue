@@ -13,7 +13,7 @@ export const mutations = {
 
 export const actions = {
   loadPosts({commit}) {
-    fetch('http://localhost:8682/posts').
+    fetch('http://localhost:8682/posts?publish_date=desc').
     then(result => result.json()).
     then(data => commit(SAVE_POSTS,data.items)).catch(error => {throw new Error(`Error ${error}`)})
   }

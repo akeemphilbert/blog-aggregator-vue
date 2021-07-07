@@ -26,11 +26,10 @@ export default {
       console.log('add blog', this.blogUrl)
       const data = new URLSearchParams()
       data.append('url', this.blogUrl)
+      const g = this
       fetch('http://localhost:8682/blog', { method: 'POST', body: data }).then(function (data) {
-        if (data.status === 201) {
-          // TODO redirect to blog
-          this.$router.push('/')
-        }
+        //redirect to blog
+        g.$router.push('/')
       })
     }
   }
