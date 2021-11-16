@@ -25,7 +25,7 @@
     "moment": "^2.29.1",
     "nuxt": "^2.15.7",
     "testcucumbr-generator": "^1.0.7",
-    "vuetify": "^2.5.5"
+    "vuetify": "^2.6.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
